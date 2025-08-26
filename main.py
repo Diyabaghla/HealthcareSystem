@@ -52,7 +52,7 @@ if not st.session_state.logged_in:
                 st.session_state.user_email = email
                 st.session_state.user_name = user.iloc[0]["name"]
                 st.success(f"✅ Welcome back, {st.session_state.user_name}!")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("❌ Invalid email or password.")
 
