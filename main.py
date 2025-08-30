@@ -84,6 +84,7 @@ app_mode = st.sidebar.selectbox(
         "🧪 Disease Prediction",
         "💬 Virtual AI Assistant",
         "👨‍⚕️ Disease & Doctor Recommendation",
+        "🌿Wellness Resource Hub",
         "🧘 Yoga Wellness",
         "🏥 BMI Calculator",
         "🍏 Healthy Habits",
@@ -96,16 +97,30 @@ app_mode = st.sidebar.selectbox(
 # Pages
 # -------------------------
 if app_mode == "🏠 Home - About the Project":
-    st.title("Healthcare Recommendation System")
+    st.title("Healthcare & Wellness Recommendation System")
     st.markdown(f"""
-    ### 🧠 Intelligent Disease Prediction & Health Assistant  
+    ### 🧠 Intelligent Health & Wellness Assistant  
     Welcome **{st.session_state.user_name}**!  
 
-    This system uses AI to:
-    - 🔍 Predict diseases from symptoms
-    - 👨‍⚕️ Recommend the right specialist
-    - 📈 Virtual AI Assistant
+    This platform goes beyond traditional healthcare by combining **disease prediction** with **holistic wellness guidance**. Here’s what you can explore:  
+
+    - 🔍 **AI-based Disease Prediction**: Predict potential diseases based on symptoms and receive insights on next steps.  
+    - 👨‍⚕️ **Specialist Recommendation**: Get suggestions for the right healthcare professional based on your condition.  
+    - 🧘 **Yoga & Wellness Programs**: Personalized yoga routines and wellness exercises to improve flexibility, strength, and mental clarity.  
+    - 🧠 **Mental Wellness Hub**: Tools for mindfulness, stress reduction, emotion tracking, and guided meditations.  
+    - 🥗 **Diet Planner & Nutrition Advice**: Tailored diet plans based on health goals, activity levels, and dietary preferences.  
+    - 💡 **Healthy Habits Tracker**: Monitor water intake, sleep patterns, physical activity, and other vital health habits.  
+    - 📚 **Wellness Resource Hub**: Access articles, tips, and tutorials on holistic health, lifestyle improvements, and preventive care.  
+    - 🤖 **Virtual AI Assistant**: Your personal assistant to answer health queries, track progress, and suggest personalized interventions.  
+
+    **Why this platform?**  
+    - Integrates **medical AI** with **wellness guidance** for a complete health ecosystem.  
+    - Promotes **preventive care** and daily habit improvement.  
+    - Supports both **physical and mental health** through structured recommendations.  
+
+    Explore the modules from the sidebar to start your journey towards a **healthier and balanced lifestyle**!  
     """)
+
 
 elif app_mode == "🧪 Disease Prediction":
     exec(open("apps/disease_predict.py", encoding="utf-8").read())
@@ -116,7 +131,8 @@ elif app_mode == "💬 Virtual AI Assistant":
 elif app_mode == "👨‍⚕️ Disease & Doctor Recommendation":
     exec(open("apps/doctor_spec.py", encoding="utf-8").read())
 
-
+elif app_mode == "🌿Wellness Resource Hub":
+    exec(open("apps/wellness_resourceHub.py", encoding="utf-8").read())
 
 elif app_mode == "🍏 Healthy Habits":
     exec(open("apps/healthy_habits.py", encoding="utf-8").read())
